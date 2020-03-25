@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3cd4487442.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Lobster&display=swap" rel="stylesheet"> 
+    <title>Pizza Classics</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="nav navbar-nav logo_container">
+        <img class="pizza_logo" src="Images/pizza_logo.png" />
+      </ul>
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <div class="nav-link">
+            <i class="fab fa-instagram fa-2x"></i>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="nav-link">
+            <i class="fab fa-facebook fa-2x"></i>
+          </div>
+        </li>
+        <li class="nav-item">
+          <h3>(000) 123-3456</h3>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="pizzabuilder.html">Build Your Own Pizza</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="menu.html"> Menu </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="contact_us.html">Contact Us</a>
+          </div>
+        </li>
+      </ul>
+      </div>
+    </nav>
+<div class="container-fluid d-flex justify-content-center">
+  <h3 class="cursive"> Build Your Own Pizza! </h3>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8">
+<div class="container-fluid d-flex justify-content-start">
+  <h4 class="cursive"> Saucy! </h4>
+</div>
+
+<div class="sauces">
+  <div class="ingredients-boxes"">
+    <input
+      type="checkbox"
+      value="redSauce"
+      onclick="isChecked(this);"
+    />
+    <label for="redSauce"> Red Sauce </label>
+
+    <input
+    type="checkbox"
+    value="whiteSauce"
+    onclick="isChecked(this);"
+  />
+  <label for="whiteSauce"> White Sauce </label>
+
+  <input
+  type="checkbox"
+  value="noSauce"
+/>
+<label for="noSauce"> No Sauce </label>
+
+<div class="container-fluid d-flex justify-content-start">
+  <h4 class="cursive"> Cheesy! </h4>
+</div>
+
+<input
+type="checkbox"
+value="mozzarella"
+onclick="isChecked(this);"
+/>
+<label for="mozzarella"> Mozzarella </label>
+
+<input
+type="checkbox"
+value="extraCheese"
+id="extraCheese"
+/>
+<label for="extraCheese"> Extra Cheese </label>
+
+<div class="container-fluid d-flex justify-content-start">
+  <h4 class="cursive"> Top It Off </h4>
+</div>
+</div>
+</div>
+</div>
+<div class="col-4"> 
+<h3 class="cursive" id="pizzaPrice"> Current Price: $<span id="currentPrice">15.00</span> </h3>
+
+</div>
+</div>
+</div>
+    <div class="ingredients-boxes" id="ingredientsCheckboxContainer">
+      <input
+        type="checkbox"
+        value="pepperoni"
+        onclick="isChecked(this);"
+        class="toppingOptions"
+      />
+      <label for="pepperoni"> Pepperoni </label>
+
+        <input
+          type="checkbox"
+          value="olive"
+          onclick="isChecked(this);"
+          class="toppingOptions"
+        />
+        <label for="olive"> Olives </label>
+
+        <input
+        type="checkbox"
+        value="pineapple"
+        onclick="isChecked(this);"
+        class="toppingOptions"
+      />
+      <label for="pineapple"> Pineapples </label>
+
+      <input
+      type="checkbox"
+      value="mushroom"
+      onclick="isChecked(this);"
+      class="toppingOptions"
+    />
+    <label for="mushroom"> Mushrooms </label>
+
+    </div>
+    <main>
+      <div class="pizza-holder">
+        <img class="wood-background" src="Images/abstract-antique-backdrop-background-164005.jpg">
+        <div class="container-fluid d-flex justify-content-center">
+        <div class="center-holder">
+          <img
+          class="pizza"
+          src="Images/pizza-hut-crust-pan-pizza-food-delivery-pizza.png"
+        />
+        <img class="pizza toppings" id="redSauce-image" src="Images/redsauce.png">
+        <img class="pizza toppings" id="whiteSauce-image" src="Images/alfredo-sauce-pizza-time.png">
+        <img class="pizza toppings" id="mozzarella-image" src="Images/mozzarella.png">
+        <img
+          class="pizza toppings"
+          id="pepperoni-image"
+          src="Images/pepperoni-transparent.png"
+        />
+        <img
+        class="pizza toppings"
+        id="olive-image"
+        src="Images/black-olives-set-isolated-on-260nw-1361201114.png"
+      />
+      <img
+      class="pizza toppings"
+      id="mushroom-image"
+      src="Images/mushrooms.png"
+    />
+
+      <img
+      class="pizza toppings"
+      id="pineapple-image"
+      src="Images/pineapples.png"
+    />
+    </div>
+    </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  
+  </body>
+</html>
