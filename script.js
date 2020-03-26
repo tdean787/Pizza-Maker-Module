@@ -41,6 +41,23 @@ function onToppingsChange(event) {
   setCurrentPrice(price)
 }
 
+function noSauce(e) {
+  var redSauce = document.getElementById("redSauce-image");
+  var redSauceCheckbox = document.getElementById("redSauceCheckbox");
+  var whiteSauce = document.getElementById("whiteSauce-image");
+  var whiteSauceCheckbox = document.getElementById("whiteSauceCheckbox");
+
+  if (e.checked) {
+    redSauce.style.visibility = "hidden";
+    whiteSauce.style.visibility = "hidden";
+    redSauceCheckbox.checked = false;
+    whiteSauceCheckbox.checked = false;
+
+
+  } else {
+
+  }
+}
 //Change the price of currentPrice text content when Extra Cheese is clicked
 document.getElementById('extraCheese').addEventListener('change', onExtraCheeseChange);
 
