@@ -1,11 +1,53 @@
+const redSauce = document.getElementById("redSauce-image");
+const redSauceInput = document.getElementById("redSauce");
+const whiteSauce = document.getElementById("whiteSauce-image");
+const whiteSauceCheckbox = document.getElementById("whiteSauceCheckbox");
+const mozzarellaInput = document.getElementById("mozzarella")
+
+redSauceInput.addEventListener('click',function(){
+  if (redSauceInput.checked) {
+    document.getElementById("redSauce-image").style.visibility = "visible";
+    whiteSauce.style.visibility = "hidden";
+  }
+});
+
+whiteSauceCheckbox.addEventListener('click',function(){
+  if (whiteSauceCheckbox.checked) {
+    document.getElementById("whiteSauce-image").style.visibility = "visible";
+    redSauce.style.visibility = "hidden";
+  }
+});
+
+function checkString(e) {
+  if (this.checked) {
+    document.getElementById(`${e.value}-image`).style.visibility = "visible";
+  } else{
+    document.getElementById(`${e.value}-image`).style.visibility = "hidden";
+  }
+}
+
+
+mozzarellaInput.addEventListener('click', checkString(mozzarellaInput))
+
+// mozzarellaInput.addEventListener('click', function(){
+//   if (this.checked){
+//     document.getElementById("mozzarella-image").style.visibility = "visible"
+//   } else {
+//     document.getElementById("mozzarella-image").style.visibility = "hidden"
+//   }
+// })
+
+
+
 function isChecked(e) {
   if (e.checked) {
     document.getElementById(e.value + "-image").style.visibility = "visible";
+  } else if (e.checked == false) {
+    document.getElementById(e.value + "-image").style.visibility = "hidden";
   } else {
     document.getElementById(e.value + "-image").style.visibility = "hidden";
   }
 }
-
 
 var currentPriceElement = document.getElementById("currentPrice")
 
@@ -42,15 +84,10 @@ function onToppingsChange(event) {
 }
 
 function noSauce(e) {
-  var redSauce = document.getElementById("redSauce-image");
-  var redSauceCheckbox = document.getElementById("redSauceCheckbox");
-  var whiteSauce = document.getElementById("whiteSauce-image");
-  var whiteSauceCheckbox = document.getElementById("whiteSauceCheckbox");
-
   if (e.checked) {
     redSauce.style.visibility = "hidden";
     whiteSauce.style.visibility = "hidden";
-    redSauceCheckbox.checked = false;
+    redSauce.checked = false;
     whiteSauceCheckbox.checked = false;
 
 

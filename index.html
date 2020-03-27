@@ -68,7 +68,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-8">
+<div class="col-8">
 <div class="container-fluid d-flex justify-content-start">
   <h4 class="cursive"> Saucy! </h4>
 </div>
@@ -76,36 +76,44 @@
 <div class="sauces">
   <div class="ingredients-boxes"">
     <input
-      type="checkbox"
+      type="radio"
       value="redSauce"
-      onclick="isChecked(this);"
-      id="redSauceCheckbox"
+      id="redSauce"
+      name="sauce"
     />
     <label for="redSauce"> Red Sauce </label>
 
     <input
-    type="checkbox"
+    type="radio"
     value="whiteSauce"
-    onclick="isChecked(this);"
     id="whiteSauceCheckbox"
+    name="sauce"
   />
-  <label for="whiteSauce"> White Sauce </label>
+  <label for="whiteSauceCheckbox"> White Sauce </label>
 
   <input
-  type="checkbox"
+  type="radio"
   value="noSauce"
   onclick="noSauce(this);"
+  id = "noSauceInput"
+  name="sauce"
 />
-<label for="noSauce"> No Sauce </label>
+<label for="noSauceInput"> No Sauce </label>
 
 <div class="container-fluid d-flex justify-content-start">
   <h4 class="cursive"> Cheesy! </h4>
 </div>
 
-<input
+<!-- <input
 type="checkbox"
 value="mozzarella"
 onclick="isChecked(this);"
+id="mozzarella"
+/> -->
+<input
+type="checkbox"
+value="mozzarella"
+id="mozzarella"
 />
 <label for="mozzarella"> Mozzarella </label>
 
@@ -121,6 +129,44 @@ id="extraCheese"
 </div>
 </div>
 </div>
+<div class="ingredients-boxes" id="ingredientsCheckboxContainer">
+  <input
+    type="checkbox"
+    value="pepperoni"
+    onclick="isChecked(this);"
+    class="toppingOptions"
+    id="pepperoni"
+  />
+  <label for="pepperoni"> Pepperoni </label>
+
+    <input
+      type="checkbox"
+      value="olive"
+      onclick="isChecked(this);"
+      class="toppingOptions"
+      id="olive"
+    />
+    <label for="olive"> Olives </label>
+
+    <input
+    type="checkbox"
+    value="pineapple"
+    onclick="isChecked(this);"
+    class="toppingOptions"
+    id="pineapple"
+  />
+  <label for="pineapple"> Pineapples </label>
+
+  <input
+  type="checkbox"
+  value="mushroom"
+  onclick="isChecked(this);"
+  class="toppingOptions"
+  id="mushroom"
+/>
+<label for="mushroom"> Mushrooms </label>
+
+</div>
 </div>
 <div class="col-4"> 
 <h3 class="cursive" id="pizzaPrice"> Current Price: $<span id="currentPrice">15.00</span> </h3>
@@ -128,40 +174,7 @@ id="extraCheese"
 </div>
 </div>
 </div>
-    <div class="ingredients-boxes" id="ingredientsCheckboxContainer">
-      <input
-        type="checkbox"
-        value="pepperoni"
-        onclick="isChecked(this);"
-        class="toppingOptions"
-      />
-      <label for="pepperoni"> Pepperoni </label>
-
-        <input
-          type="checkbox"
-          value="olive"
-          onclick="isChecked(this);"
-          class="toppingOptions"
-        />
-        <label for="olive"> Olives </label>
-
-        <input
-        type="checkbox"
-        value="pineapple"
-        onclick="isChecked(this);"
-        class="toppingOptions"
-      />
-      <label for="pineapple"> Pineapples </label>
-
-      <input
-      type="checkbox"
-      value="mushroom"
-      onclick="isChecked(this);"
-      class="toppingOptions"
-    />
-    <label for="mushroom"> Mushrooms </label>
-
-    </div>
+   
     <main>
       <div class="pizza-holder">
         <img class="wood-background" src="Images/abstract-antique-backdrop-background-164005.jpg">
@@ -172,7 +185,7 @@ id="extraCheese"
           src="Images/pizza-hut-crust-pan-pizza-food-delivery-pizza.png"
         />
         <img class="pizza toppings" id="redSauce-image" src="Images/redsauce.png">
-        <img class="pizza toppings" id="whiteSauce-image" src="Images/alfredo-sauce-pizza-time.png">
+        <img class="pizza toppings" id="whiteSauce-image" src="Images/whiteSauceNew.png">
         <img class="pizza toppings" id="mozzarella-image" src="Images/mozzarella.png">
         <img
           class="pizza toppings"
