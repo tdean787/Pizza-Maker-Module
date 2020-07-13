@@ -2,16 +2,16 @@ const redSauce = document.getElementById("redSauce-image");
 const redSauceInput = document.getElementById("redSauce");
 const whiteSauce = document.getElementById("whiteSauce-image");
 const whiteSauceCheckbox = document.getElementById("whiteSauceCheckbox");
-const mozzarellaInput = document.getElementById("mozzarella")
+const mozzarellaInput = document.getElementById("mozzarella");
 
-redSauceInput.addEventListener('click',function(){
+redSauceInput.addEventListener("click", function () {
   if (redSauceInput.checked) {
     document.getElementById("redSauce-image").style.visibility = "visible";
     whiteSauce.style.visibility = "hidden";
   }
 });
 
-whiteSauceCheckbox.addEventListener('click',function(){
+whiteSauceCheckbox.addEventListener("click", function () {
   if (whiteSauceCheckbox.checked) {
     document.getElementById("whiteSauce-image").style.visibility = "visible";
     redSauce.style.visibility = "hidden";
@@ -21,23 +21,20 @@ whiteSauceCheckbox.addEventListener('click',function(){
 function checkString(e) {
   if (this.checked) {
     document.getElementById(`${e.value}-image`).style.visibility = "visible";
-  } else{
+  } else {
     document.getElementById(`${e.value}-image`).style.visibility = "hidden";
   }
 }
 
+mozzarellaInput.addEventListener("click", checkString(mozzarellaInput));
 
-mozzarellaInput.addEventListener('click', checkString(mozzarellaInput))
-
-// mozzarellaInput.addEventListener('click', function(){
-//   if (this.checked){
-//     document.getElementById("mozzarella-image").style.visibility = "visible"
-//   } else {
-//     document.getElementById("mozzarella-image").style.visibility = "hidden"
-//   }
-// })
-
-
+mozzarellaInput.addEventListener("click", function () {
+  if (this.checked) {
+    document.getElementById("mozzarella-image").style.visibility = "visible";
+  } else {
+    document.getElementById("mozzarella-image").style.visibility = "hidden";
+  }
+});
 
 function isChecked(e) {
   if (e.checked) {
@@ -49,10 +46,10 @@ function isChecked(e) {
   }
 }
 
-var currentPriceElement = document.getElementById("currentPrice")
+var currentPriceElement = document.getElementById("currentPrice");
 
 //Retrieve the current text value for price
-function getCurrentPrice(){
+function getCurrentPrice() {
   return Number(currentPriceElement.textContent);
 }
 
@@ -69,7 +66,7 @@ function onExtraCheeseChange(event) {
   } else {
     price -= 5;
   }
-  setCurrentPrice(price)
+  setCurrentPrice(price);
 }
 
 function onToppingsChange(event) {
@@ -80,7 +77,7 @@ function onToppingsChange(event) {
   } else {
     price -= 1.8;
   }
-  setCurrentPrice(price)
+  setCurrentPrice(price);
 }
 
 function noSauce(e) {
@@ -89,18 +86,17 @@ function noSauce(e) {
     whiteSauce.style.visibility = "hidden";
     redSauce.checked = false;
     whiteSauceCheckbox.checked = false;
-
-
   } else {
-
   }
 }
 //Change the price of currentPrice text content when Extra Cheese is clicked
-document.getElementById('extraCheese').addEventListener('change', onExtraCheeseChange);
+document
+  .getElementById("extraCheese")
+  .addEventListener("change", onExtraCheeseChange);
 
-var ingredientToppings = document.getElementsByClassName('toppingOptions')
+var ingredientToppings = document.getElementsByClassName("toppingOptions");
 
 //Iterate over array of checkboxes with the class toppingsOptions and add event listener to run each time a checkbox is clicked
-for(var i = 0; i < ingredientToppings.length; i++) {
-  ingredientToppings[i].addEventListener('change', onToppingsChange);
+for (var i = 0; i < ingredientToppings.length; i++) {
+  ingredientToppings[i].addEventListener("change", onToppingsChange);
 }
